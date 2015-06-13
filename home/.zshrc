@@ -1,3 +1,6 @@
+# homesick
+export DOTFILES_HOME=/Users/xd/.homesick/repos/dotfiles/home
+
 # external plugin
 fpath=(/usr/local/Cellar/zsh-completions/*/share/zsh-completions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -57,6 +60,6 @@ PROMPT2="%{[31m%}%_%%%{[m%} "
 RPROMPT='%1(v|%F{cyan}%1v%f|)%{[32m%}[%40<...<%~]%{[m%}'
 SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
 
-source ~/dotfiles/zsh/env.zsh
-source ~/dotfiles/zsh/alias.zsh
+source $DOTFILES_HOME/zsh/env.zsh
+source $DOTFILES_HOME/zsh/alias.zsh
 [[ -f ~/.zsh_local ]] && source ~/.zsh_local # custom configuration
