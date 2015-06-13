@@ -1,5 +1,5 @@
 # homesick
-export DOTFILES_HOME=/Users/xd/.homesick/repos/dotfiles/home
+export DOTFILES_HOME=$HOME/.homesick/repos/dotfiles/home
 
 # external plugin
 fpath=(/usr/local/Cellar/zsh-completions/*/share/zsh-completions $fpath)
