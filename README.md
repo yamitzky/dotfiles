@@ -17,8 +17,10 @@ $ vim # call :NeoBundleInstall
 
 ### Homebrew
 
+```sh
 $ brew install `cat Brewlist`
 $ brew cask install `cat Brewlist-cask`
+```
 
 ### on Terminal
 
