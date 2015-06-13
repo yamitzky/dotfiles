@@ -1,0 +1,22 @@
+[user]
+	name = Yamitzky
+	email = negiga@gmail.com
+[core]
+	editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
+	excludesfile = ~/.gitignore
+[include]
+	path = ~/.gitconfig.local
+[color]
+	ui = true
+[merge]
+	ff = false
+[push]
+    default = simple
+[help]
+    autocorrect = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path =
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
