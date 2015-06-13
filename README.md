@@ -12,8 +12,8 @@ $ vim # call :NeoBundleInstall
 
 ### on Browser
 
-- (MacVim-Kaoriya)[https://github.com/splhack/macvim-kaoriya/releases]
-- (Anaconda)[http://continuum.io/downloads]
+- [MacVim-Kaoriya](https://github.com/splhack/macvim-kaoriya/releases)
+- [Anaconda](http://continuum.io/downloads)
 
 ### Homebrew
 
