@@ -69,6 +69,8 @@ NeoBundle 'scrooloose/syntastic.git'
 NeoBundle 'jtratner/vim-flavored-markdown'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'fakeclip'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 call neobundle#end()
 
@@ -148,7 +150,6 @@ let g:user_emmet_leader_key='<C-Z>'
 autocmd FileType html,css EmmetInstall
 
 "syntastic
-" let g:syntastic_python_exec= '/Users/a13456/anaconda/bin/python'
 let g:syntastic_python_checkers = ['pyflakes', 'pep8']
 
 """"""""""""""""""""""""""""""""
