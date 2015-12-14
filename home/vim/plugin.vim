@@ -71,6 +71,8 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'fakeclip'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle 'SQLUtilities'
+NeoBundle 'Align'
 
 call neobundle#end()
 
@@ -88,8 +90,8 @@ let g:EnhCommentifyRespectIndent = "yes"
 command! FF :FufFile
 
 "Git Gutter
-nmap gh <Plug>GitGutterNextHunk
-nmap gH <Plug>GitGutterPrevHunk
+nmap gi <Plug>GitGutterPrevHunk
+nmap gk <Plug>GitGutterNextHunk
 command! G :GitGutterToggle
 let g:gitgutter_diff_args = '-w'
 
@@ -121,7 +123,7 @@ let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsEditSplit="horizontal"
 
 " EasyMotion
 let g:EasyMotion_leader_key = '<Space><Space>'
@@ -150,7 +152,7 @@ let g:user_emmet_leader_key='<C-Z>'
 autocmd FileType html,css EmmetInstall
 
 "syntastic
-let g:syntastic_python_checkers = ['pyflakes', 'pep8']
+let g:syntastic_python_checkers = ['flake8']
 
 """"""""""""""""""""""""""""""""
 " neocomplete
@@ -164,7 +166,8 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete_force_overwrite_completefunc=1
 let g:neocomplete#force_omni_input_patterns = {}
 let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
-let g:neocomplete#force_omni_input_patterns.python = '\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+let g:neocomplete#force_omni_input_patterns.python='\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+
 let g:clang_complete_auto=0
 let g:neocomplete#enable_auto_select = 1
 let g:neocomplete#enable_underbar_completion = 1
@@ -176,7 +179,6 @@ let g:neocomplete_dictionary_filetype_lists = {
       \ }
 
 autocmd! FileType eruby,html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
-autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType python setlocal shiftwidth=4
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 
@@ -187,3 +189,6 @@ command! CacheSyntax neocompleteCachingSyntax
 if has('conceal')
   set conceallevel=2 concealcursor=i
 endif
+
+" SQL
+vmap sf <Plug>SQLUFormatter<CR>

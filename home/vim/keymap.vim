@@ -40,3 +40,19 @@ inoremap <C-H> {<Enter>}<Esc>V=O
 inoremap <C-A> [<Enter>]<Esc>O
 
 command! Delete :%s/^  *$/
+
+cmap w!! w !sudo tee > /dev/null %
+
+function! s:mkdir(dir, force)
+  if !isdirectory(a:dir) && (a:force ||
+        \ input(printf('"%s" does not exist. Create? [y/N]', a:dir)) =~? '^y\%[es]$')
+    call mkdir(iconv(a:dir, &encoding, &termencoding), 'p')
+  endif
+endfunction
+autocmd BufWritePre * call s:mkdir(expand('<afile>:p:h'), v:cmdbang)
+
+function! s:import()
+  split
+  normal gg
+endfunction
+command! Import :call s:import()
