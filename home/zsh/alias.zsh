@@ -10,13 +10,13 @@ alias pushcap="git push origin --all && cap "
 alias l="ls -AGFh"
 alias tm="tmux"
 alias cd..="cd .."
-alias q="exit"
 alias :q="exit"
 alias :tabe="vim"
 alias logcat="adb logcat -c && adb logcat"
 alias dex2jar="d2j-dex2jar.sh"
 alias pbc="tee >(pbcopy)"
 alias bsh="java -cp ~/softwares/bsh-2.0b4.jar bsh.Interpreter"
+alias mecab="mecab -d `mecab-config --dicdir`'/mecab-ipadic-neologd'"
 
 # override
 alias mv="mv -i"
@@ -41,6 +41,7 @@ alias anaipy="~/anaconda/bin/ipython"
 alias anapy="~/anaconda/bin/python"
 alias anapip="~/anaconda/bin/pip"
 alias conda="~/anaconda/bin/conda"
+alias jupyter="~/anaconda/bin/jupyter"
 alias rodeo="~/anaconda/bin/rodeo"
 
 # python

@@ -5,6 +5,7 @@ export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:$HOME/anaconda/lib
 export RSENSE_HOME=$HOME/sources/rsense-0.3
 export GOPATH=$HOME/gocode
 export PYTHONPATH=/usr/local/Cellar/opencv/2.4.6.1/lib/python2.7/site-packages:$PYTHONPATH
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 # PATH
 export PATH=~/softwares:$PATH
