@@ -4,6 +4,7 @@
 [core]
 	editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
 	excludesfile = ~/.gitignore
+	quotepath = false
 [include]
 	path = ~/.gitconfig.local
 [color]
