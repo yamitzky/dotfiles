@@ -1,0 +1,8 @@
+source ~/.homesick/repos/dotfiles/home/vim/plugin.vim
+source ~/.homesick/repos/dotfiles/home/vim/basic.vim
+source ~/.homesick/repos/dotfiles/home/vim/keymap.vim
+source ~/.homesick/repos/dotfiles/home/vim/design.vim
+source ~/.homesick/repos/dotfiles/home/vim/filetype.vim
+
+vmap gt :action NextTab<CR>
+vmap T :action PreviousTab<CR>
