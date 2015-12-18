@@ -18,3 +18,4 @@ export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/softwares/adt/sdk/platform-tools:$HOME/softwares/adt/sdk/tools
 export PATH=$PATH:$HOME/softwares/adt/sdk/build-tools/17.0.0
 export PATH=$HOME/.nodebrew/current/bin:$PATH
+export PATH=$PATH:$HOME/anaconda/bin
