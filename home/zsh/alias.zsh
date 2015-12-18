@@ -43,6 +43,7 @@ alias anapip="~/anaconda/bin/pip"
 alias conda="~/anaconda/bin/conda"
 alias jupyter="~/anaconda/bin/jupyter"
 alias rodeo="~/anaconda/bin/rodeo"
+alias cython="~/anaconda/bin/cython"
 
 # python
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'

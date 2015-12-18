@@ -51,7 +51,7 @@ NeoBundle 'Shougo/vimproc.vim', {
 \     'unix' : 'gmake',
 \    },
 \ }
-NeoBundle "Rip-Rip/clang_complete.git"
+NeoBundle 'justmao945/vim-clang'
 NeoBundle 'airblade/vim-gitgutter'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'LeafCage/yankround.vim'
@@ -153,6 +153,8 @@ autocmd FileType html,css EmmetInstall
 
 "syntastic
 let g:syntastic_python_checkers = ['flake8']
+let g:syntastic_cpp_remove_include_errors=1
+let g:syntastic_cpp_compiler = 'clang++'
 
 """"""""""""""""""""""""""""""""
 " neocomplete
@@ -177,6 +179,18 @@ let g:neocomplete_dictionary_filetype_lists = {
       \ 'javascript' : $HOME.'/.vim/dict/javascript.dict',
       \ 'php' : $HOME.'/.vim/dict/php.dict',
       \ }
+
+" clang
+let g:clang_auto=0
+let g:clang_c_completeopt = 'menuone,preview'
+let g:clang_cpp_completeopt = 'menuone,preview'
+if !exists('g:neocomplete#force_omni_input_patterns')
+  let g:neocomplete#force_omni_input_patterns = {}
+endif
+let g:neocomplete#force_omni_input_patterns.c =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)\w*'
+let g:neocomplete#force_omni_input_patterns.cpp =
+      \ '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
 
 autocmd! FileType eruby,html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType python setlocal shiftwidth=4
