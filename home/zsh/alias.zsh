@@ -17,6 +17,7 @@ alias dex2jar="d2j-dex2jar.sh"
 alias pbc="tee >(pbcopy)"
 alias bsh="java -cp ~/softwares/bsh-2.0b4.jar bsh.Interpreter"
 alias mecab="mecab -d `mecab-config --dicdir`'/mecab-ipadic-neologd'"
+alias dl="docker ps -l -q"
 
 # override
 alias mv="mv -i"
