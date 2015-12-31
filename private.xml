@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<root>
+  <appdef>
+    <appname>ATOM</appname>
+    <equal>com.github.atom</equal>
+  </appdef>
+  <appdef>
+    <appname>Chrome</appname>
+    <equal>com.google.Chrome</equal>
+  </appdef>
+  <devicevendordef>
+    <vendorname>FILCO</vendorname>
+    <vendorid>0x04d9</vendorid>
+  </devicevendordef>
+  <deviceproductdef>
+    <productname>FILCO_MAJESTOUCH</productname>
+    <productid>0x2011</productid>
+  </deviceproductdef>
+  <list>
+    <item>
+      <name>Leave Insert Mode with EISUU (vim keybind apps)</name>
+      <identifier>private.vim_keybind_apps_esc_with_eisuu</identifier>
+      <only>ATOM</only>
+      <autogen>--KeyToKey-- KeyCode::ESCAPE, KeyCode::ESCAPE, KeyCode::JIS_EISUU</autogen>
+      <autogen>--KeyToKey-- KeyCode::BRACKET_LEFT, VK_CONTROL, KeyCode::BRACKET_LEFT, VK_CONTROL, KeyCode::JIS_EISUU</autogen>
+    </item>
+    <item>
+      <name>Change f19 key to control key</name>
+      <appendix>(Change f19 key to command key in internal keyboard.)</appendix>
+      <identifier>private.f19_hack</identifier>
+      <block>
+        <!-- change f19 key to delete key -->
+        <device_only>
+          DeviceVendor::FILCO,
+          DeviceProduct::FILCO_MAJESTOUCH
+        </device_only>
+        <autogen>--KeyToKey-- KeyCode::F19, KeyCode::CONTROL_L</autogen>
+      </block>
+      <block>
+        <!-- change f19 key to caps lock key in other devices -->
+        <autogen>--KeyToKey-- KeyCode::F19, KeyCode::COMMAND_L</autogen>
+      </block>
+    </item>
+  </list>
+</root>
