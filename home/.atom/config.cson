@@ -1,0 +1,21 @@
+"*":
+  "exception-reporting":
+    userId: "32d4ddd2-ca37-2aa8-7bd2-abf8d6a0280f"
+  welcome:
+    showOnStartup: false
+  core:
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    invisibles: {}
+    scrollPastEnd: true
+    tabType: "soft"
+  minimap:
+    plugins:
+      "minimap-autohide": true
+  "atom-beautify": {}
+  "markdown-preview":
+    breakOnSingleNewline: true
+    useGitHubStyle: true
