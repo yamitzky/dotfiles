@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- ln -s ~/.homesick/repos/dotfiles/private.xml ~/Library/Application\ Support/Karabiner/private.xml -->
 <root>
   <appdef>
     <appname>ATOM</appname>
