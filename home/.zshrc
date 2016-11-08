@@ -63,3 +63,8 @@ SPROMPT="%{[31m%}%r is correct? [n,y,a,e]:%{[m%} "
 source $DOTFILES_HOME/zsh/env.zsh
 source $DOTFILES_HOME/zsh/alias.zsh
 [[ -f ~/.zsh_local ]] && source ~/.zsh_local # custom configuration
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# added by travis gem
+[ -f /Users/xd/.travis/travis.sh ] && source /Users/xd/.travis/travis.sh
