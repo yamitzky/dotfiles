@@ -40,6 +40,10 @@ NeoBundle 'kana/vim-fakeclip.git'
 NeoBundle 'L9'
 NeoBundle 'FuzzyFinder'
 NeoBundle 'jpalardy/vim-slime.git'
+NeoBundle 'othree/yajs.vim'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'moll/vim-node'
 NeoBundle 'marijnh/tern_for_vim.git'
 NeoBundle 'othree/html5.vim.git'
 NeoBundle 'Shougo/vimproc.vim', {
@@ -111,7 +115,7 @@ let NERDTreeMapJumpFirstChild="B"
 "vim-slime
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
-let g:slime_python_ipython = 1
+let g:slime_python_ipython = 0
 let g:slime_default_config = {"socket_name": "default", "target_pane": "0.1"}
 
 "Ctrlp
@@ -155,6 +159,7 @@ autocmd FileType html,css EmmetInstall
 let g:syntastic_python_checkers = ['flake8']
 let g:syntastic_cpp_remove_include_errors=1
 let g:syntastic_cpp_compiler = 'clang++'
+let g:syntastic_javascript_checkers = ['eslint']
 
 """"""""""""""""""""""""""""""""
 " neocomplete
@@ -206,3 +211,6 @@ endif
 
 " SQL
 vmap sf <Plug>SQLUFormatter<CR>
+
+"JSX
+let g:jsx_ext_required = 0
