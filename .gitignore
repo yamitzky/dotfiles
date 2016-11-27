@@ -1,6 +1,6 @@
 .DS_Store
 *.un~
 home/.vim/bundle/*
-!home/.vim/bundle/neobundle.vim
+!home/.vim/bundle/dein.vim
 home/.vim/tmp/*
 !home/.vim/tmp/.gitkeep

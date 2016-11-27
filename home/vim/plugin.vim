@@ -1,91 +1,65 @@
-if has('vim_starting')
-  set nocompatible               " Be iMproved
-
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &compatible
+  set nocompatible
 endif
+set runtimepath+=~/.vim/bundle/dein.vim/
 
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
+call dein#begin(expand('~/.vim/bundle/'))
 
-" Let NeoBundle manage NeoBundle
-" Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#add('tpope/vim-fugitive')
+call dein#add('kien/ctrlp.vim')
+call dein#add('ack.vim')
+call dein#add('scrooloose/nerdtree')
+call dein#add('kchmck/vim-coffee-script')
+call dein#add('mattn/emmet-vim')
+call dein#add('deris/parajump')
+call dein#add('hail2u/vim-css3-syntax')
+call dein#add('Lokaltog/vim-easymotion')
+call dein#add('cocoa.vim')
+call dein#add('quickrun.vim')
+call dein#add('Markdown')
+call dein#add('groenewege/vim-less')
+call dein#add('fugitive.vim')
+call dein#add('tpope/vim-rails')
+call dein#add('EnhCommentify.vim')
+call dein#add('wombat256.vim')
+call dein#add('kana/vim-fakeclip.git')
+call dein#add('L9')
+call dein#add('FuzzyFinder')
+call dein#add('jpalardy/vim-slime.git')
+call dein#add('othree/yajs.vim')
+call dein#add('pangloss/vim-javascript')
+call dein#add('mxw/vim-jsx')
+call dein#add('moll/vim-node')
+call dein#add('marijnh/tern_for_vim.git')
+call dein#add('othree/html5.vim.git')
+call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+call dein#add('justmao945/vim-clang')
+call dein#add('airblade/vim-gitgutter')
+call dein#add('nathanaelkane/vim-indent-guides')
+call dein#add('LeafCage/yankround.vim')
+call dein#add('tpope/vim-surround')
+call dein#add('sjl/gundo.vim')
+call dein#add('davidhalter/jedi-vim')
+call dein#add('Raimondi/delimitMate')
+call dein#add('sjl/gundo.vim')
+call dein#add('honza/vim-snippets')
+call dein#add('SirVer/ultisnips')
+call dein#add('python_match.vim')
+call dein#add('hynek/vim-python-pep8-indent')
+call dein#add('tell-k/vim-autopep8')
+call dein#add('scrooloose/syntastic.git')
+call dein#add('jtratner/vim-flavored-markdown')
+call dein#add('derekwyatt/vim-scala')
+call dein#add('fakeclip')
+call dein#add('pangloss/vim-javascript')
+call dein#add('mxw/vim-jsx')
+call dein#add('SQLUtilities')
+call dein#add('Align')
 
-" My Bundles here:
-if has('lua')
-  NeoBundle 'Shougo/neocomplete.git'
-  NeoBundle "Shougo/neocomplcache-rsense.git"
-endif
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'kien/ctrlp.vim'
+call dein#end()
 
-NeoBundle 'ack.vim'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'mattn/emmet-vim'
-NeoBundle 'deris/parajump'
-NeoBundle 'hail2u/vim-css3-syntax'
-NeoBundle 'Lokaltog/vim-easymotion'
-NeoBundle 'cocoa.vim'
-NeoBundle 'quickrun.vim'
-NeoBundle 'Markdown'
-NeoBundle 'groenewege/vim-less'
-NeoBundle 'fugitive.vim'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'EnhCommentify.vim'
-NeoBundle 'Wombat'
-NeoBundle 'michalbachowski/vim-wombat256mod'
-NeoBundle 'kana/vim-fakeclip.git'
-NeoBundle 'L9'
-NeoBundle 'FuzzyFinder'
-NeoBundle 'jpalardy/vim-slime.git'
-NeoBundle 'othree/yajs.vim'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'moll/vim-node'
-NeoBundle 'marijnh/tern_for_vim.git'
-NeoBundle 'othree/html5.vim.git'
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make -f make_mac.mak',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-NeoBundle 'justmao945/vim-clang'
-NeoBundle 'airblade/vim-gitgutter'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'LeafCage/yankround.vim'
-NeoBundle 'tpope/vim-surround'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'davidhalter/jedi-vim'
-NeoBundle 'Raimondi/delimitMate'
-NeoBundle 'sjl/gundo.vim'
-NeoBundle 'honza/vim-snippets'
-NeoBundle 'SirVer/ultisnips'
-NeoBundle 'python_match.vim'
-NeoBundle 'hynek/vim-python-pep8-indent'
-NeoBundle 'tell-k/vim-autopep8'
-NeoBundle 'scrooloose/syntastic.git'
-NeoBundle 'jtratner/vim-flavored-markdown'
-NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'fakeclip'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle 'SQLUtilities'
-NeoBundle 'Align'
-
-call neobundle#end()
-
-" Required:
 filetype plugin indent on
-
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+syntax enable
 
 "Commentify
 let g:EnhCommentifyRespectIndent = "yes"

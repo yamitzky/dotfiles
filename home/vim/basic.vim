@@ -18,7 +18,7 @@ set listchars=tab:>-,trail:-
 set backupdir=~/.vim/tmp
 set directory=~/.vim/tmp
 set undodir=~/.vim/tmp
-set clipboard=autoselect
+set clipboard+=unnamedplus
 syntax on
 
 if exists('&ambiwidth')
