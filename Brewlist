@@ -10,6 +10,7 @@ mecab
 mecab-ipadic
 node
 openssl
+pyenv
 rbenv
 readline
 reattach-to-user-namespace
@@ -20,6 +21,7 @@ source-highlight
 the_silver_searcher
 tmux
 wget
+yarn
 zsh
 zsh-completions
 zsh-syntax-highlighting

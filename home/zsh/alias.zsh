@@ -37,15 +37,6 @@ alias newest="~/projects/ruby/newest/newest"
 alias mutual="~/projects/ruby/mutual/mutual"
 alias igata="~/projects/ruby/igata/bin/igata"
 
-# anaconda
-alias anaipy="~/anaconda/bin/ipython"
-alias anapy="~/anaconda/bin/python"
-alias anapip="~/anaconda/bin/pip"
-alias conda="~/anaconda/bin/conda"
-alias jupyter="~/anaconda/bin/jupyter"
-alias rodeo="~/anaconda/bin/rodeo"
-alias cython="~/anaconda/bin/cython"
-
 # python
 alias urlencode='python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
 alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
