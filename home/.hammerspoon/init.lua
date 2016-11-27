@@ -1,6 +1,4 @@
 hs.hotkey.bind({"ctrl"}, 102, function()
-  hs.alert.show("ctrl")
 end)
 hs.hotkey.bind({"shift"}, 102, function()
-  hs.alert.show("shift")
 end)
