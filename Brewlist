@@ -1,4 +1,3 @@
-caskroom/cask/brew-cask
 peco/peco/peco
 autojump
 curl
@@ -15,8 +14,10 @@ node
 openssl
 pandoc
 python3
+rbenv
 readline
 reattach-to-user-namespace
+ruby-build
 sbt
 scala
 source-highlight
