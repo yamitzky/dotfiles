@@ -22,3 +22,7 @@ export PATH=$PATH:$HOME/anaconda/bin
 
 eval "$(pyenv init -)"
 eval "$(rbenv init -)"
+
+export ANDROID_HOME=~/Library/Android/sdk
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
