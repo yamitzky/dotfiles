@@ -1,7 +1,6 @@
 peco/peco/peco
 autojump
 curl
-eigen
 gawk
 gcc
 gibo
@@ -9,11 +8,8 @@ gnu-sed
 imagemagick
 mecab
 mecab-ipadic
-mysql
 node
 openssl
-pandoc
-python3
 rbenv
 readline
 reattach-to-user-namespace
@@ -21,10 +17,8 @@ ruby-build
 sbt
 scala
 source-highlight
-sqlite
 the_silver_searcher
 tmux
-watch
 wget
 zsh
 zsh-completions
