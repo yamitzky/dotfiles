@@ -26,32 +26,40 @@
 # Atom Flight Manual:
 # https://atom.io/docs/latest/using-atom-basic-customization#cson
 
-'atom-text-editor.vim-mode:not(.insert-mode)':
-  'j': 'vim-mode:move-left'
-  'i': 'vim-mode:move-up'
-  'k': 'vim-mode:move-down'
-  'L': 'vim-mode:move-to-next-whole-word'
-  'H': 'vim-mode:insert-at-beginning-of-line'
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'j': 'vim-mode-plus:move-left'
+  'i': 'vim-mode-plus:move-up'
+  'k': 'vim-mode-plus:move-down'
+  'L': 'vim-mode-plus:move-to-next-whole-word'
+  'H': 'vim-mode-plus:insert-at-beginning-of-line'
   'T': 'pane:show-previous-item'
 
-'atom-text-editor.vim-mode.normal-mode':
-  'h': 'vim-mode:activate-insert-mode'
+'atom-text-editor.vim-mode-plus.normal-mode':
+  'h': 'vim-mode-plus:activate-insert-mode'
+  ':': 'vim-mode-plus-ex-mode:open'
+  '!': 'vim-mode-plus-ex-mode:toggle-setting'
 
-'atom-text-editor.vim-mode.operator-pending-mode, atom-text-editor.vim-mode.visual-mode':
-  'h w': 'vim-mode:select-inside-word'
-  'h W': 'vim-mode:select-inside-whole-word'
-  'h "': 'vim-mode:select-inside-double-quotes'
-  'h \'': 'vim-mode:select-inside-single-quotes'
-  'h `': 'vim-mode:select-inside-back-ticks'
-  'h {': 'vim-mode:select-inside-curly-brackets'
-  'h }': 'vim-mode:select-inside-curly-brackets'
-  'h B': 'vim-mode:select-inside-curly-brackets'
-  'h <': 'vim-mode:select-inside-angle-brackets'
-  'h >': 'vim-mode:select-inside-angle-brackets'
-  'h t': 'vim-mode:select-inside-tags'
-  'h [': 'vim-mode:select-inside-square-brackets'
-  'h ]': 'vim-mode:select-inside-square-brackets'
-  'h (': 'vim-mode:select-inside-parentheses'
-  'h )': 'vim-mode:select-inside-parentheses'
-  'h b': 'vim-mode:select-inside-parentheses'
-  'h p': 'vim-mode:select-inside-paragraph'
+'atom-text-editor.vim-mode-plus.operator-pending-mode, atom-text-editor.vim-mode-plus.visual-mode':
+  'h w': 'vim-mode-plus:inner-word'
+  'h W': 'vim-mode-plus:inner-whole-word'
+  'h "': 'vim-mode-plus:inner-double-quote'
+  'h \'': 'vim-mode-plus:inner-single-quote'
+  'h `': 'vim-mode-plus:inner-back-ticks'
+  'h {': 'vim-mode-plus:inner-curly-brackets'
+  'h }': 'vim-mode-plus:inner-curly-brackets'
+  'h B': 'vim-mode-plus:inner-curly-brackets'
+  'h <': 'vim-mode-plus:inner-angle-brackets'
+  'h >': 'vim-mode-plus:inner-angle-brackets'
+  'h t': 'vim-mode-plus:inner-tags'
+  'h [': 'vim-mode-plus:inner-square-brackets'
+  'h ]': 'vim-mode-plus:inner-square-brackets'
+  'h (': 'vim-mode-plus:inner-parentheses'
+  'h )': 'vim-mode-plus:inner-parentheses'
+  'h b': 'vim-mode-plus:inner-parentheses'
+  'h p': 'vim-mode-plus:inner-paragraph'
+
+'.platform-darwin atom-workspace':
+  'shift-cmd-O': 'nuclide-quick-open:find-anything-via-omni-search'
+
+'atom-workspace':
+  'shift-cmd-A': 'command-palette:toggle'

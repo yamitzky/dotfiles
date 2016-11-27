@@ -1,9 +1,26 @@
 "*":
-  "exception-reporting":
-    userId: "32d4ddd2-ca37-2aa8-7bd2-abf8d6a0280f"
-  welcome:
-    showOnStartup: false
+  "atom-beautify": {}
   core:
+    customFileTypes:
+      "source.ini": [
+        ".buckconfig"
+        ".hgrc"
+        ".flowconfig"
+      ]
+      "source.json": [
+        ".arcconfig"
+        "BUCK.autodeps"
+      ]
+      "source.python": [
+        "BUCK"
+      ]
+    disabledPackages: [
+      "vim-surround"
+      "japanese-menu"
+      "ex-mode"
+      "tree-view"
+    ]
+    telemetryConsent: "no"
     themes: [
       "atom-dark-ui"
       "atom-dark-syntax"
@@ -12,10 +29,14 @@
     invisibles: {}
     scrollPastEnd: true
     tabType: "soft"
-  minimap:
-    plugins:
-      "minimap-autohide": true
-  "atom-beautify": {}
+  "exception-reporting":
+    userId: "32d4ddd2-ca37-2aa8-7bd2-abf8d6a0280f"
   "markdown-preview":
     breakOnSingleNewline: true
     useGitHubStyle: true
+  minimap:
+    plugins:
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+  welcome:
+    showOnStartup: false
