@@ -15,15 +15,10 @@ $ vim # call :NeoBundleInstall
 - [MacVim-Kaoriya](https://github.com/splhack/macvim-kaoriya/releases)
 - [Anaconda](http://continuum.io/downloads)
 
-### Homebrew
-
-```sh
-$ brew install `cat Brewlist`
-$ brew cask install `cat Brewlist-cask`
-```
-
 ### on Terminal
 
 ```sh
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install `cat Brewlist`
+$ apm install `cat apmlist`
 ```
