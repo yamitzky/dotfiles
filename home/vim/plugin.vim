@@ -9,52 +9,52 @@ call dein#add('tpope/vim-fugitive')
 call dein#add('kien/ctrlp.vim')
 call dein#add('ack.vim')
 call dein#add('scrooloose/nerdtree')
-call dein#add('kchmck/vim-coffee-script')
-call dein#add('mattn/emmet-vim')
+call dein#add('kchmck/vim-coffee-script', {'on_ft': 'coffee'})
+call dein#add('mattn/emmet-vim', {'on_i': 1})
 call dein#add('deris/parajump')
-call dein#add('hail2u/vim-css3-syntax')
+call dein#add('hail2u/vim-css3-syntax', {'on_ft': 'css'})
 call dein#add('Lokaltog/vim-easymotion')
-call dein#add('cocoa.vim')
 call dein#add('quickrun.vim')
-call dein#add('Markdown')
-call dein#add('groenewege/vim-less')
+call dein#add('Markdown', {'on_ft': 'markdown'})
+call dein#add('groenewege/vim-less', {'on_ft': 'less'})
 call dein#add('fugitive.vim')
-call dein#add('tpope/vim-rails')
+call dein#add('tpope/vim-rails', {'on_ft': 'ruby'})
 call dein#add('EnhCommentify.vim')
 call dein#add('wombat256.vim')
 call dein#add('kana/vim-fakeclip.git')
 call dein#add('L9')
 call dein#add('FuzzyFinder')
 call dein#add('jpalardy/vim-slime.git')
-call dein#add('othree/yajs.vim')
-call dein#add('pangloss/vim-javascript')
-call dein#add('mxw/vim-jsx')
-call dein#add('moll/vim-node')
-call dein#add('marijnh/tern_for_vim.git')
-call dein#add('othree/html5.vim.git')
+call dein#add('othree/yajs.vim', {'on_ft': 'javascript'})
+call dein#add('pangloss/vim-javascript', {'on_ft': 'javascript'})
+call dein#add('mxw/vim-jsx', {'on_ft': 'javascript'})
+call dein#add('moll/vim-node', {'on_ft': 'javascript'})
+call dein#add('marijnh/tern_for_vim.git', {'on_ft': 'javascript', 'on_i': 1})
+call dein#add('othree/html5.vim.git', {'on_ft': 'html'})
 call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-call dein#add('justmao945/vim-clang')
+call dein#add('justmao945/vim-clang', {'on_ft': ['c', 'cpp']})
 call dein#add('airblade/vim-gitgutter')
 call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('LeafCage/yankround.vim')
 call dein#add('tpope/vim-surround')
 call dein#add('sjl/gundo.vim')
-call dein#add('davidhalter/jedi-vim')
+call dein#add('davidhalter/jedi-vim', {'on_ft': 'python', 'on_i': 1})
 call dein#add('Raimondi/delimitMate')
 call dein#add('sjl/gundo.vim')
 call dein#add('honza/vim-snippets')
 call dein#add('SirVer/ultisnips')
 call dein#add('python_match.vim')
-call dein#add('hynek/vim-python-pep8-indent')
-call dein#add('tell-k/vim-autopep8')
+call dein#add('hynek/vim-python-pep8-indent', {'on_ft': 'python'})
+call dein#add('tell-k/vim-autopep8', {'on_ft': 'python'})
 call dein#add('scrooloose/syntastic.git')
-call dein#add('jtratner/vim-flavored-markdown')
-call dein#add('derekwyatt/vim-scala')
+call dein#add('jtratner/vim-flavored-markdown', {'on_ft': 'markdown'})
+call dein#add('derekwyatt/vim-scala', {'on_ft': 'scala'})
 call dein#add('fakeclip')
-call dein#add('pangloss/vim-javascript')
-call dein#add('mxw/vim-jsx')
-call dein#add('SQLUtilities')
+call dein#add('pangloss/vim-javascript', {'on_ft': 'javascript'})
+call dein#add('mxw/vim-jsx', {'on_ft': 'javascript'})
+call dein#add('SQLUtilities', {'on_ft': 'sql'})
 call dein#add('Align')
+call dein#add('Shougo/deoplete.nvim', {'on_i': 1})
 
 call dein#end()
 
@@ -140,7 +140,14 @@ let g:syntastic_javascript_checkers = ['eslint']
 """"""""""""""""""""""""""""""""
 set completeopt-=preview
 
-let g:neocomplete#enable_at_startup = 1
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+let g:deoplete#force_omni_input_patterns = {}
+let g:deoplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
+let g:deoplete#force_omni_input_patterns.python='\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
+let g:deoplete#source#attribute#min_pattern_length = 3
+
+" let g:neocomplete#enable_at_startup = 1
 let g:rsenseHome = "~/sources/rsense-0.3"
 let g:neocomplete#sources#rsense#home_directory = g:rsenseHome
 let g:neocomplete#enable_smart_case = 1
