@@ -12,13 +12,13 @@ autoload -Uz zmv
 compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
-SAVEHIST=1000
+SAVEHIST=1000000
 setopt auto_cd
 setopt auto_remove_slash
 setopt always_last_prompt
 setopt share_history
 setopt append_history
-setopt hist_ignore_dups
+setopt hist_ignore_all_dups
 setopt hist_ignore_space
 setopt hist_no_store
 setopt auto_pushd
