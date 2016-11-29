@@ -15,10 +15,13 @@ set shiftwidth=2
 set indentkeys=!^F,o,O
 set list
 set listchars=tab:>-,trail:-
-set backupdir=~/.vim/tmp
-set directory=~/.vim/tmp
-set undodir=~/.vim/tmp
-set clipboard=unnamed
+set backupdir=$HOME/.vim/tmp
+set writebackup
+set swapfile
+set directory=$HOME/.vim/tmp
+set undodir=$HOME/.vim/tmp
+set undofile
+set clipboard+=unnamed
 syntax on
 
 if exists('&ambiwidth')

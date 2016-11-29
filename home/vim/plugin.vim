@@ -38,7 +38,7 @@ call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('LeafCage/yankround.vim')
 call dein#add('tpope/vim-surround')
 call dein#add('sjl/gundo.vim')
-call dein#add('davidhalter/jedi-vim', {'on_ft': 'python', 'on_i': 1})
+" call dein#add('davidhalter/jedi-vim', {'on_ft': 'python', 'on_i': 1})
 call dein#add('Raimondi/delimitMate')
 call dein#add('sjl/gundo.vim')
 call dein#add('honza/vim-snippets')
@@ -46,7 +46,7 @@ call dein#add('SirVer/ultisnips')
 call dein#add('python_match.vim')
 call dein#add('hynek/vim-python-pep8-indent', {'on_ft': 'python'})
 call dein#add('tell-k/vim-autopep8', {'on_ft': 'python'})
-call dein#add('scrooloose/syntastic.git')
+call dein#add('vim-syntastic/syntastic')
 call dein#add('jtratner/vim-flavored-markdown', {'on_ft': 'markdown'})
 call dein#add('derekwyatt/vim-scala', {'on_ft': 'scala'})
 call dein#add('fakeclip')
@@ -55,6 +55,7 @@ call dein#add('mxw/vim-jsx', {'on_ft': 'javascript'})
 call dein#add('SQLUtilities', {'on_ft': 'sql'})
 call dein#add('Align')
 call dein#add('Shougo/deoplete.nvim', {'on_i': 1})
+call dein#add('zchee/deoplete-jedi', {'on_i': 1, 'on_ft': 'python'})
 
 call dein#end()
 
@@ -89,7 +90,7 @@ let NERDTreeMapJumpFirstChild="B"
 "vim-slime
 let g:slime_target = "tmux"
 let g:slime_paste_file = tempname()
-let g:slime_python_ipython = 0
+let g:slime_python_ipython = 1
 let g:slime_default_config = {"socket_name": "default", "target_pane": "0.1"}
 
 "Ctrlp
@@ -104,7 +105,7 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="horizontal"
 
 " EasyMotion
-let g:EasyMotion_leader_key = '<Space><Space>'
+"let g:EasyMotion_leader_key = '<Space><Space>'
 
 "jedi
 autocmd FileType python setlocal omnifunc=jedi#completions
@@ -142,10 +143,10 @@ set completeopt-=preview
 
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#enable_smart_case = 1
-let g:deoplete#force_omni_input_patterns = {}
-let g:deoplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
-let g:deoplete#force_omni_input_patterns.python='\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
-let g:deoplete#source#attribute#min_pattern_length = 3
+set completeopt+=noinsert
+let g:deoplete#file#enable_buffer_path = 1
+let g:deoplete#omni#input_patterns = {}
+let g:deoplete#omni#input_patterns.python='\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
 " let g:neocomplete#enable_at_startup = 1
 let g:rsenseHome = "~/sources/rsense-0.3"

@@ -2,7 +2,7 @@
 	name = Yamitzky
 	email = negiga@gmail.com
 [core]
-	editor = "/Applications/MacVim.app/Contents/MacOS/Vim"
+	editor = "nvim"
 	excludesfile = ~/.gitignore
 	quotepath = false
 [include]
