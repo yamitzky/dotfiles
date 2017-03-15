@@ -19,7 +19,7 @@ call dein#add('Markdown', {'on_ft': 'markdown'})
 call dein#add('groenewege/vim-less', {'on_ft': 'less'})
 call dein#add('fugitive.vim')
 call dein#add('tpope/vim-rails', {'on_ft': 'ruby'})
-call dein#add('EnhCommentify.vim')
+call dein#add('tomtom/tcomment_vim')
 call dein#add('wombat256.vim')
 call dein#add('kana/vim-fakeclip.git')
 call dein#add('L9')
@@ -51,19 +51,21 @@ call dein#add('jtratner/vim-flavored-markdown', {'on_ft': 'markdown'})
 call dein#add('derekwyatt/vim-scala', {'on_ft': 'scala'})
 call dein#add('fakeclip')
 call dein#add('pangloss/vim-javascript', {'on_ft': 'javascript'})
-call dein#add('mxw/vim-jsx', {'on_ft': 'javascript'})
 call dein#add('SQLUtilities', {'on_ft': 'sql'})
 call dein#add('Align')
 call dein#add('Shougo/deoplete.nvim', {'on_i': 1})
 call dein#add('zchee/deoplete-jedi', {'on_i': 1, 'on_ft': 'python'})
+call dein#add('posva/vim-vue')
 
 call dein#end()
 
 filetype plugin indent on
 syntax enable
 
-"Commentify
-let g:EnhCommentifyRespectIndent = "yes"
+" Commentify
+noremap <Leader>x :TComment<cr>
+xnoremap <Leader>x :TCommentMaybeInline<cr>
+noremap <Leader>p vip:TComment<cr>
 
 "FufFile
 command! FF :FufFile

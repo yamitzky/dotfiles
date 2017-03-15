@@ -4,6 +4,7 @@ set history=50
 set ruler
 set showcmd
 set incsearch
+set hlsearch
 set mouse=a
 set autoindent
 set fileformats=unix,dos,mac
@@ -21,6 +22,12 @@ set swapfile
 set directory=$HOME/.vim/tmp
 set undodir=$HOME/.vim/tmp
 set undofile
+set ignorecase
+set nojoinspaces
+set smartcase
+set magic
+set splitbelow
+set splitright
 set clipboard+=unnamed
 syntax on
 

@@ -10,6 +10,8 @@ autocmd BufNewFile,BufRead *.rabl set filetype=ruby
 autocmd BufRead,BufNewFile *.mkd set filetype=markdown
 autocmd BufRead,BufNewFile *.md set filetype=markdown
 
+autocmd BufNewFile,BufRead *.vue set filetype=html
+
 augroup MyXML
   autocmd!
   autocmd Filetype xml inoremap <buffer> </ </<C-x><C-o>

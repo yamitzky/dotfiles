@@ -1,9 +1,11 @@
 # homesick
 export DOTFILES_HOME=$HOME/.homesick/repos/dotfiles/home
+export PATH=/usr/local/bin:$PATH
 
 # external plugin
 fpath=(/usr/local/Cellar/zsh-completions/*/share/zsh-completions $fpath)
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 [[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
 [[ -s $HOME/.tmuxinator/scripts/tmuxinator ]] && source $HOME/.tmuxinator/scripts/tmuxinator
 

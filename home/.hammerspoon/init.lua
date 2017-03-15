@@ -23,7 +23,7 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "L", function()
 end)
 
 hs.hotkey.bind({"cmd"}, "1", function()
-  launchOrHide("iTerm 2", "iTerm2")
+  launchOrHide("iTerm", "iTerm2")
 end)
 hs.hotkey.bind({"cmd"}, "2", function()
   launchOrHide("Atom", "Atom")

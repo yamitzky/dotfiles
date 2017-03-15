@@ -56,3 +56,5 @@ function! s:import()
   normal gg
 endfunction
 command! Import :call s:import()
+
+nnoremap /  /\v

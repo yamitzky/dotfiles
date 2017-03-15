@@ -1,4 +1,4 @@
-export EDITOR=vim
+export EDITOR=nvim
 export MYSQL_WORKBENCH="/Applications/MySQLWorkbench.app/Contents/MacOS/MySQLWorkbench"
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.7.0_45.jdk/Contents/Home
 export DYLD_FALLBACK_LIBRARY_PATH=$DYLD_FALLBACK_LIBRARY_PATH:$HOME/anaconda/lib
