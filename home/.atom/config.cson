@@ -1,5 +1,7 @@
 "*":
-  "atom-beautify": {}
+  "atom-beautify":
+    general:
+      _analyticsUserId: "fe327e71-4b88-4193-b36c-da9cf069539a"
   core:
     customFileTypes:
       "source.ini": [
@@ -18,7 +20,6 @@
       "vim-surround"
       "japanese-menu"
       "ex-mode"
-      "tree-view"
     ]
     telemetryConsent: "no"
     themes: [
@@ -38,5 +39,7 @@
     plugins:
       "minimap-autohide": true
       "minimap-autohideDecorationsZIndex": 0
+  "vim-mode-plus-ex-mode":
+    notifiedUseExMode: true
   welcome:
     showOnStartup: false
