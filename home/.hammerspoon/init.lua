@@ -3,12 +3,21 @@ function pressKey(modifier, key)
   hs.timer.usleep(100)
   hs.eventtap.event.newKeyEvent(modifier, key, false):post()
 end
-function launchOrHide(launchAppName, activeAppName)
+function launchOrHide(bundleID)
   app = hs.application.frontmostApplication()
-  if app:name() == activeAppName then
+  if app:bundleID() == bundleID then
     app:hide()
   else
-    hs.application.launchOrFocus(launchAppName)
+    activated = false
+    for _, app in ipairs(hs.application.runningApplications()) do
+      if app:bundleID() == bundleID then
+        app:activate()
+        activated = true
+      end
+    end
+    if not(activated) then
+      hs.application.launchOrFocusByBundleID(bundleID)
+    end
   end
 end
 
@@ -23,14 +32,22 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "L", function()
 end)
 
 hs.hotkey.bind({"cmd"}, "1", function()
-  launchOrHide("iTerm", "iTerm2")
+  launchOrHide("com.googlecode.iterm2")
 end)
 hs.hotkey.bind({"cmd"}, "2", function()
-  launchOrHide("Atom", "Atom")
+  launchOrHide("com.microsoft.VSCode")
 end)
 hs.hotkey.bind({"cmd"}, "3", function()
-  launchOrHide("Google Chrome", "Google Chrome")
+  launchOrHide("com.google.Chrome")
 end)
 hs.hotkey.bind({"cmd"}, "4", function()
-  launchOrHide("IntelliJ IDEA CE", "IntelliJ IDEA")
+  launchOrHide("com.jetbrains.pycharm")
+end)
+hs.hotkey.bind({"cmd"}, "5", function()
+  launchOrHide("com.tinyspeck.slackmacgap")
+end)
+
+hs.hotkey.bind({"cmd", "alt", "shift"}, "X", function()
+  pressKey({"cmd"}, "l")
+  pressKey({"cmd"}, "c")
 end)
