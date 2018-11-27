@@ -1,4 +1,10 @@
+.mypy_cache/
+.vscode/
+ptsvd_entrypoint.py
+ptvsd_entrypoint.py
 .envrc
+.env
+.history/
 ### https://raw.github.com/github/gitignore/d4c9696398b91788944faa9365ced70c1764b78b/Global/OSX.gitignore
 
 .DS_Store
@@ -83,5 +89,14 @@ com_crashlytics_export_strings.xml
 crashlytics.properties
 crashlytics-build.properties
 fabric.properties
+
+
+### https://raw.github.com/github/gitignore/8b50f4fef48c4a78552337d920b711c7f80bcbee/Global/VisualStudioCode.gitignore
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 
