@@ -68,5 +68,6 @@ source $DOTFILES_HOME/zsh/alias.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-# added by travis gem
-[ -f /Users/xd/.travis/travis.sh ] && source /Users/xd/.travis/travis.sh
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+alias cat=/usr/local/bin/bat
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
