@@ -148,7 +148,6 @@ let g:deoplete#enable_smart_case = 1
 set completeopt+=noinsert
 let g:deoplete#file#enable_buffer_path = 1
 let g:deoplete#omni#input_patterns = {}
-let g:deoplete#omni#input_patterns.python='\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
 " let g:neocomplete#enable_at_startup = 1
 let g:rsenseHome = "~/sources/rsense-0.3"
@@ -157,7 +156,6 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete_force_overwrite_completefunc=1
 let g:neocomplete#force_omni_input_patterns = {}
 let g:neocomplete#force_omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\|::'
-let g:neocomplete#force_omni_input_patterns.python='\%([^. \t]\.\|^\s*@\|^\s*from\s.\+import \|^\s*from \|^\s*import \)\w*'
 
 let g:clang_complete_auto=0
 let g:neocomplete#enable_auto_select = 1
