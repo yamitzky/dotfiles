@@ -20,5 +20,4 @@ $ install dein
 ```sh
 $ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 $ brew install `cat Brewlist`
-$ apm install `cat apmlist`
 ```
