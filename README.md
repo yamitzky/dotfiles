@@ -6,7 +6,7 @@
 $ sudo gem install homesick
 $ homesick clone yamitzky/dotfiles
 $ cd ~/ && homesick symlink dotfiles
-$ vim # call :NeoBundleInstall
+$ install dein
 ```
 ## Set up guidance for me
 
