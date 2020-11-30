@@ -1,5 +1,7 @@
-peco/peco/peco
-neovim/neovim/neovim
+bat
+direnv
+peco
+neovim
 autojump
 curl
 gawk
@@ -24,5 +26,6 @@ tmux
 wget
 yarn
 zsh
+zsh-autosuggestions
 zsh-completions
 zsh-syntax-highlighting

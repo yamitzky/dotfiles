@@ -71,3 +71,6 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 alias cat=/usr/local/bin/bat
 export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+export PATH="$HOME/.serverless/bin:$PATH"
+complete -o nospace -C /usr/local/bin/bitcomplete bit

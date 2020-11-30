@@ -5,25 +5,23 @@ set runtimepath+=~/.vim/bundle/dein.vim/
 
 call dein#begin(expand('~/.vim/bundle/'))
 
-call dein#add('tpope/vim-fugitive')
 call dein#add('kien/ctrlp.vim')
-call dein#add('ack.vim')
+call dein#add('vim-scripts/ack.vim')
 call dein#add('scrooloose/nerdtree')
 call dein#add('kchmck/vim-coffee-script', {'on_ft': 'coffee'})
 call dein#add('mattn/emmet-vim', {'on_i': 1})
 call dein#add('deris/parajump')
 call dein#add('hail2u/vim-css3-syntax', {'on_ft': 'css'})
 call dein#add('Lokaltog/vim-easymotion')
-call dein#add('quickrun.vim')
-call dein#add('Markdown', {'on_ft': 'markdown'})
+call dein#add('vim-scripts/quickrun.vim')
+call dein#add('vim-scripts/Markdown', {'on_ft': 'markdown'})
 call dein#add('groenewege/vim-less', {'on_ft': 'less'})
-call dein#add('fugitive.vim')
 call dein#add('tpope/vim-rails', {'on_ft': 'ruby'})
 call dein#add('tomtom/tcomment_vim')
-call dein#add('wombat256.vim')
+call dein#add('vim-scripts/wombat256.vim')
 call dein#add('kana/vim-fakeclip.git')
-call dein#add('L9')
-call dein#add('FuzzyFinder')
+call dein#add('vim-scripts/L9')
+call dein#add('vim-scripts/FuzzyFinder')
 call dein#add('jpalardy/vim-slime.git')
 call dein#add('othree/yajs.vim', {'on_ft': 'javascript'})
 call dein#add('pangloss/vim-javascript', {'on_ft': 'javascript'})
@@ -38,21 +36,19 @@ call dein#add('nathanaelkane/vim-indent-guides')
 call dein#add('LeafCage/yankround.vim')
 call dein#add('tpope/vim-surround')
 call dein#add('sjl/gundo.vim')
-" call dein#add('davidhalter/jedi-vim', {'on_ft': 'python', 'on_i': 1})
 call dein#add('Raimondi/delimitMate')
 call dein#add('sjl/gundo.vim')
 call dein#add('honza/vim-snippets')
-call dein#add('SirVer/ultisnips')
-call dein#add('python_match.vim')
+call dein#add('vim-scripts/python_match.vim')
 call dein#add('hynek/vim-python-pep8-indent', {'on_ft': 'python'})
 call dein#add('tell-k/vim-autopep8', {'on_ft': 'python'})
 call dein#add('vim-syntastic/syntastic')
 call dein#add('jtratner/vim-flavored-markdown', {'on_ft': 'markdown'})
 call dein#add('derekwyatt/vim-scala', {'on_ft': 'scala'})
-call dein#add('fakeclip')
+call dein#add('vim-scripts/fakeclip')
 call dein#add('pangloss/vim-javascript', {'on_ft': 'javascript'})
-call dein#add('SQLUtilities', {'on_ft': 'sql'})
-call dein#add('Align')
+call dein#add('vim-scripts/SQLUtilities', {'on_ft': 'sql'})
+call dein#add('vim-scripts/Align')
 call dein#add('Shougo/deoplete.nvim', {'on_i': 1})
 call dein#add('zchee/deoplete-jedi', {'on_i': 1, 'on_ft': 'python'})
 call dein#add('posva/vim-vue')
@@ -99,12 +95,12 @@ let g:slime_default_config = {"socket_name": "default", "target_pane": "0.1"}
 let g:ctrlp_use_migemo = 1
 
 "UltiSnip
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+" let g:UltiSnipsExpandTrigger="<tab>"
+" let g:UltiSnipsJumpForwardTrigger="<tab>"
+" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 " If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="horizontal"
+" let g:UltiSnipsEditSplit="horizontal"
 
 " EasyMotion
 "let g:EasyMotion_leader_key = '<Space><Space>'

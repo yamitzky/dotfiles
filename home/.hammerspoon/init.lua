@@ -3,22 +3,26 @@ function pressKey(modifier, key)
   hs.timer.usleep(100)
   hs.eventtap.event.newKeyEvent(modifier, key, false):post()
 end
-function launchOrHide(bundleID)
+
+function launchOrHide(...)
+  bundleIDs = {...}
   app = hs.application.frontmostApplication()
-  if app:bundleID() == bundleID then
-    app:hide()
-  else
-    activated = false
-    for _, app in ipairs(hs.application.runningApplications()) do
-      if app:bundleID() == bundleID then
-        app:activate()
-        activated = true
-      end
-    end
-    if not(activated) then
-      hs.application.launchOrFocusByBundleID(bundleID)
+  top = false
+  for _, bundleID in pairs(bundleIDs) do
+    if app:bundleID() == bundleID then
+      app:hide()
+      return
     end
   end
+  for _, bundleID in pairs(bundleIDs) do
+    for _, app in pairs(hs.application.runningApplications()) do
+      if app:bundleID() == bundleID then
+        app:activate()
+        return
+      end
+    end
+  end
+  hs.application.launchOrFocusByBundleID(bundleID)
 end
 
 hs.hotkey.bind({"ctrl"}, 102, function() end)
@@ -38,11 +42,11 @@ hs.hotkey.bind({"cmd"}, "2", function()
   launchOrHide("com.microsoft.VSCode")
 end)
 hs.hotkey.bind({"cmd"}, "3", function()
-  launchOrHide("com.google.Chrome")
+  launchOrHide("com.google.Chrome.canary", "com.google.Chrome")
 end)
-hs.hotkey.bind({"cmd"}, "4", function()
-  launchOrHide("com.jetbrains.pycharm")
-end)
+-- hs.hotkey.bind({"cmd"}, "4", function()
+--   launchOrHide("com.jetbrains.pycharm")
+-- end)
 hs.hotkey.bind({"cmd"}, "5", function()
   launchOrHide("com.tinyspeck.slackmacgap")
 end)

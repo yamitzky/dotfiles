@@ -103,14 +103,14 @@ function randimg() {
 alias gs="git status"
 alias gc="git commit"
 alias gco="git checkout"
-alias gpush="git push"
-alias gpull="git pull"
 alias gl="git log"
 alias ga="git add"
 alias gb="git branch"
 alias gd="git diff"
 alias gm="git merge"
 alias rebase="git pull --rebase upstream"
+alias gp='git pull --rebase origin `git symbolic-ref --short HEAD`'
+alias gsh='git push origin `git symbolic-ref --short HEAD`'
 
 # abbr
 typeset -A abbreviations
