@@ -74,3 +74,5 @@ export PATH="/usr/local/opt/sqlite/bin:$PATH"
 
 export PATH="$HOME/.serverless/bin:$PATH"
 complete -o nospace -C /usr/local/bin/bitcomplete bit
+
+export PATH="$HOME/.poetry/bin:$PATH"
