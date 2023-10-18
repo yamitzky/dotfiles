@@ -1,59 +1,53 @@
-if &compatible
-  set nocompatible
-endif
-set runtimepath+=~/.vim/bundle/dein.vim/
+packadd vim-jetpack
 
-call dein#begin(expand('~/.vim/bundle/'))
+call jetpack#begin()
 
-call dein#add('kien/ctrlp.vim')
-call dein#add('vim-scripts/ack.vim')
-call dein#add('scrooloose/nerdtree')
-call dein#add('kchmck/vim-coffee-script', {'on_ft': 'coffee'})
-call dein#add('mattn/emmet-vim', {'on_i': 1})
-call dein#add('deris/parajump')
-call dein#add('hail2u/vim-css3-syntax', {'on_ft': 'css'})
-call dein#add('Lokaltog/vim-easymotion')
-call dein#add('vim-scripts/quickrun.vim')
-call dein#add('vim-scripts/Markdown', {'on_ft': 'markdown'})
-call dein#add('groenewege/vim-less', {'on_ft': 'less'})
-call dein#add('tpope/vim-rails', {'on_ft': 'ruby'})
-call dein#add('tomtom/tcomment_vim')
-call dein#add('vim-scripts/wombat256.vim')
-call dein#add('kana/vim-fakeclip.git')
-call dein#add('vim-scripts/L9')
-call dein#add('vim-scripts/FuzzyFinder')
-call dein#add('jpalardy/vim-slime.git')
-call dein#add('othree/yajs.vim', {'on_ft': 'javascript'})
-call dein#add('pangloss/vim-javascript', {'on_ft': 'javascript'})
-call dein#add('mxw/vim-jsx', {'on_ft': 'javascript'})
-call dein#add('moll/vim-node', {'on_ft': 'javascript'})
-call dein#add('marijnh/tern_for_vim.git', {'on_ft': 'javascript', 'on_i': 1})
-call dein#add('othree/html5.vim.git', {'on_ft': 'html'})
-call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
-call dein#add('justmao945/vim-clang', {'on_ft': ['c', 'cpp']})
-call dein#add('airblade/vim-gitgutter')
-call dein#add('nathanaelkane/vim-indent-guides')
-call dein#add('LeafCage/yankround.vim')
-call dein#add('tpope/vim-surround')
-call dein#add('sjl/gundo.vim')
-call dein#add('Raimondi/delimitMate')
-call dein#add('sjl/gundo.vim')
-call dein#add('honza/vim-snippets')
-call dein#add('vim-scripts/python_match.vim')
-call dein#add('hynek/vim-python-pep8-indent', {'on_ft': 'python'})
-call dein#add('tell-k/vim-autopep8', {'on_ft': 'python'})
-call dein#add('vim-syntastic/syntastic')
-call dein#add('jtratner/vim-flavored-markdown', {'on_ft': 'markdown'})
-call dein#add('derekwyatt/vim-scala', {'on_ft': 'scala'})
-call dein#add('vim-scripts/fakeclip')
-call dein#add('pangloss/vim-javascript', {'on_ft': 'javascript'})
-call dein#add('vim-scripts/SQLUtilities', {'on_ft': 'sql'})
-call dein#add('vim-scripts/Align')
-" call dein#add('Shougo/deoplete.nvim', {'on_i': 1})
-" call dein#add('zchee/deoplete-jedi', {'on_i': 1, 'on_ft': 'python'})
-call dein#add('posva/vim-vue')
+Jetpack 'kien/ctrlp.vim'
+Jetpack 'vim-scripts/ack.vim'
+Jetpack 'scrooloose/nerdtree'
+Jetpack 'kchmck/vim-coffee-script', {'on_ft': 'coffee'}
+Jetpack 'mattn/emmet-vim', {'on_i': 1}
+Jetpack 'deris/parajump'
+Jetpack 'hail2u/vim-css3-syntax', {'on_ft': 'css'}
+Jetpack 'Lokaltog/vim-easymotion'
+Jetpack 'vim-scripts/quickrun.vim'
+Jetpack 'vim-scripts/Markdown', {'on_ft': 'markdown'}
+Jetpack 'groenewege/vim-less', {'on_ft': 'less'}
+Jetpack 'tpope/vim-rails', {'on_ft': 'ruby'}
+Jetpack 'tomtom/tcomment_vim'
+Jetpack 'vim-scripts/wombat256.vim'
+Jetpack 'kana/vim-fakeclip.git'
+Jetpack 'vim-scripts/L9'
+Jetpack 'vim-scripts/FuzzyFinder'
+Jetpack 'jpalardy/vim-slime.git'
+Jetpack 'othree/yajs.vim', {'on_ft': 'javascript'}
+Jetpack 'pangloss/vim-javascript', {'on_ft': 'javascript'}
+Jetpack 'mxw/vim-jsx', {'on_ft': 'javascript'}
+Jetpack 'moll/vim-node', {'on_ft': 'javascript'}
+Jetpack 'marijnh/tern_for_vim.git', {'on_ft': 'javascript', 'on_i': 1}
+Jetpack 'othree/html5.vim.git', {'on_ft': 'html'}
+Jetpack 'Shougo/vimproc.vim', {'build' : 'make'}
+Jetpack 'justmao945/vim-clang', {'on_ft': ['c', 'cpp']}
+Jetpack 'airblade/vim-gitgutter'
+Jetpack 'nathanaelkane/vim-indent-guides'
+Jetpack 'LeafCage/yankround.vim'
+Jetpack 'tpope/vim-surround'
+Jetpack 'sjl/gundo.vim'
+Jetpack 'Raimondi/delimitMate'
+Jetpack 'honza/vim-snippets'
+Jetpack 'vim-scripts/python_match.vim'
+Jetpack 'hynek/vim-python-pep8-indent', {'on_ft': 'python'}
+Jetpack 'tell-k/vim-autopep8', {'on_ft': 'python'}
+Jetpack 'vim-syntastic/syntastic'
+Jetpack 'jtratner/vim-flavored-markdown', {'on_ft': 'markdown'}
+Jetpack 'derekwyatt/vim-scala', {'on_ft': 'scala'}
+Jetpack 'vim-scripts/fakeclip'
+Jetpack 'vim-scripts/SQLUtilities', {'on_ft': 'sql'}
+Jetpack 'vim-scripts/Align'
+Jetpack 'posva/vim-vue'
+Jetpack 'tani/vim-jetpack', {'opt': 1}
 
-call dein#end()
+call jetpack#end()
 
 filetype plugin indent on
 syntax enable

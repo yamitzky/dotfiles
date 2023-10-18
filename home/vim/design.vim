@@ -6,5 +6,5 @@ set statusline=%f\ %m%r%h%w\ [FMT=%{&ff}]\ [ENC=%{&fileencoding}]\ [TYP=%Y]%=(Li
 try
   colorscheme wombat256mod
 catch
-  colorscheme wombat
+  colorscheme default
 endtry

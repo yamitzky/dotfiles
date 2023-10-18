@@ -4,6 +4,8 @@ bindkey "^n" history-beginning-search-forward-end
 bindkey "^a" beginning-of-line
 bindkey "^e" end-of-line
 
+alias cat=/opt/homebrew/bin/bat
+
 # alias
 alias migrate="bundle exec rake db:migrate"
 alias pushcap="git push origin --all && cap "
@@ -17,7 +19,6 @@ alias logcat="adb logcat -c && adb logcat"
 alias dex2jar="d2j-dex2jar.sh"
 alias pbc="tee >(pbcopy)"
 alias bsh="java -cp ~/softwares/bsh-2.0b4.jar bsh.Interpreter"
-alias mecab="mecab -d `mecab-config --dicdir`'/mecab-ipadic-neologd'"
 alias dl="docker ps -l -q"
 
 # override
@@ -44,6 +45,9 @@ alias urldecode='python -c "import sys, urllib as ul; print ul.unquote_plus(sys.
 alias quickwatch="watchmedo shell-command --recursive --command='echo \"\`date -v-1m +\"%H:%M:%S\"\` \${watch_src_path}\"' ."
 alias json="python -m json.tool"
 alias simpleserver="python -m SimpleHTTPServer"
+
+# nocorrect
+alias yarn='nocorrect yarn'
 
 # utility func
 sha1() {
