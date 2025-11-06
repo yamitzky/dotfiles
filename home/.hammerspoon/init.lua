@@ -7,7 +7,6 @@ end
 function launchOrHide(...)
   bundleIDs = {...}
   app = hs.application.frontmostApplication()
-  top = false
   for _, bundleID in pairs(bundleIDs) do
     if app:bundleID() == bundleID then
       app:hide()
@@ -36,13 +35,13 @@ hs.hotkey.bind({"cmd", "alt", "shift"}, "L", function()
 end)
 
 hs.hotkey.bind({"cmd"}, "1", function()
-  launchOrHide("com.googlecode.iterm2")
+  launchOrHide("com.mitchellh.ghostty")
 end)
 hs.hotkey.bind({"cmd"}, "2", function()
-  launchOrHide("com.microsoft.VSCode")
+  launchOrHide("com.todesktop.230313mzl4w4u92", "com.microsoft.VSCode")
 end)
 hs.hotkey.bind({"cmd"}, "3", function()
-  launchOrHide("com.google.Chrome.canary", "com.google.Chrome")
+  launchOrHide("com.google.Chrome", "com.openai.atlas", "ai.perplexity.comet", "com.google.Chrome.canary")
 end)
 hs.hotkey.bind({"cmd"}, "4", function()
   launchOrHide("notion.id")
